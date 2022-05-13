@@ -1,0 +1,15 @@
+<input type="number" [value]="count" (change)="onChange($event)" />
+
+<table class="table">
+  <tbody>
+    <tr>
+      <div *ngFor="let card of cards">
+        <app-card
+          [cardNumber]="card"
+          [currentCardNumber]="currentCardNumber"
+          (currentCard)="currentCard($event)"
+        ></app-card>
+      </div>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,5 @@
+<td (click)="onClick()">card {{cardNumber}}
+  <div *ngIf="(cardNumber === currentCardNumber);then content else other_content">here is ignored</div>
+  <ng-template #content>up</ng-template>
+  <ng-template #other_content>down</ng-template>
+</td>
